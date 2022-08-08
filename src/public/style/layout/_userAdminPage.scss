@@ -1,0 +1,117 @@
+.users-container{ h1{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+    .userDB{
+        
+        .title-user{
+            
+            text-transform: uppercase;
+            margin-top: 20px;
+            font-weight: 700;
+            border-top: 1px solid $greyDarkColor;
+            
+        }
+        ul{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            list-style-type: none ;
+            align-items: center;
+            border-bottom: 1px solid $greyDarkColor;
+            padding-left: 50px;
+            
+            li{
+                border-right: 1px solid $greyDarkColor;
+                padding: 20px 10px;
+            }
+            p{
+                
+                padding:20px ;
+                background: $greyColor;
+                color: $greyDarkColor;
+                font-weight: 700;
+                // border: 2px solid $greyDarkColor;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: all 0.1s ease-in-out;
+                text-decoration: none;
+                color: $blueColor;
+                &:visited {
+                    color: $blueColor;
+                }
+                &:hover {
+                    outline: 1px solid $blueColor;
+            }
+            
+        }
+        
+
+    }
+}}
+.hikesAdmin-container{ 
+    margin-bottom: 20px;
+    h1{
+            
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.hikesDB{
+
+.title-hikes{
+    
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-weight: 700;
+    border-top: 1px solid $greyDarkColor;
+    
+}
+ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    list-style-type: none ;
+    align-items: center;
+    border-bottom: 1px solid $greyDarkColor;
+    padding-left: 50px;
+    
+    li{
+        border-right: 1px solid $greyDarkColor;
+        padding: 20px 10px;
+    }
+    .nameHike{
+        max-height: 60px;
+        overflow-y: scroll;
+    }
+    .descriptionHike{
+        max-height: 60px;
+        overflow-y: scroll;
+    }
+    p{
+        
+        padding:20px ;
+        background: $greyColor;
+        color: $greyDarkColor;
+        font-weight: 700;
+        // border: 2px solid $greyDarkColor;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+        text-decoration: none;
+        color: $blueColor;
+        &:visited {
+            color: $blueColor;
+        }
+        &:hover {
+            outline: 1px solid $blueColor;
+    }
+    
+}
+
+
+}
+}}

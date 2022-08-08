@@ -1,0 +1,116 @@
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    margin: 20px 0;
+    .navTag{
+        background: $greyColor;
+        color: $greyDarkColor;
+        padding: 10px;
+        margin: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+        @media screen and (max-width: 701px) {
+            padding: 10px;
+            margin: 0;
+        }
+        a,
+        a:visited
+        a:link{
+            color: $greyDarkColor;
+            text-decoration: none;
+            text-transform: uppercase;
+            position: relative;
+            &:hover{
+                font-weight: 600;
+                font-size: 0.985rem;
+            }
+        }
+        a::after{
+            position : absolute;
+            width : 100%;
+            height : 2px;
+            background-color: $blueColor;
+            bottom: -2px;
+            left: 0;
+            transform : scaleX(0);
+            transform-origin: bottom right;
+            transition : transform 0.25s linear;
+            content : "";
+        }
+        a:hover::after{
+            transform-origin: bottom left;
+            transform: scaleX(1);
+        }
+    }
+}
+
+
+
+
+
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 40px;
+    align-items: stretch;
+    padding: 0 50px;
+    .hikeCard{
+        background: $greyColor;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.1s ease-in-out;
+        &:hover {
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+        }
+        i{
+            color: $blueColor;
+        }
+        .hikeCard-img{
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px 5px 0 0;
+        }
+        .hikeCard-title{
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: $greyDarkColor;
+            text-align: center;
+        }
+        .hikeCard-description{
+            font-size: 1rem;
+            color: $greyDarkColor;
+            text-align: center;
+        }
+        .hikeCard-btn{
+            background: $greyColor;
+            color: $greyDarkColor;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid $greyDarkColor;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.1s ease-in-out;
+            &:hover {
+                    transform: translate(-1px, -2px);
+                    box-shadow: $greyColor 5px 5px 0px -0.5px, $blueColor 5px 5px;
+                    border: 1px solid $blueColor;
+            }
+            a {
+                text-decoration: none;
+                color: $blueColor;
+                &:visited {
+                    color: $blueColor;
+                }
+            }
+        }
+    }
+}

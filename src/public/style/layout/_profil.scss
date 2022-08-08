@@ -1,0 +1,183 @@
+.profil-container{
+    max-width: 1200px;
+    margin: 30px auto 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
+    }
+    .profil-img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        .profilOverlay{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            .avatar{
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                margin-bottom: 20px;
+                transition: all 0.1s ease-in-out;
+                border: 3px solid $blueColor;
+                position: relative;
+            }
+            .avatarEdit{
+                position: absolute;
+                border: 1px solid $blueColor;
+                border-radius: 50%;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.6);
+                color: white;
+                text-decoration: none;
+                font-size: 1.4rem;
+                font-weight: bold;
+                text-align: center;
+                line-height: 200px;
+                opacity: 0;
+                transition: opacity 0.15s ease-in-out;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+        .information{
+            font-style: italic;
+            font-size: 26px;
+            color: #b8bebe;
+        }
+    }
+    .profil-information{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 1000px) {
+            justify-items: left;
+            grid-column-gap: 100px;
+            height:250px;
+            padding-left: 15px;
+        }
+        .userFirstname { 
+            grid-area: 1 / 1 / 2 / 2; 
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 20px;
+            .userFirstname-label{
+                font-size: 1.5rem;
+                color: $greyDarkColor;
+                text-align: left;
+                font-weight: 600;
+            }
+            .userFirstname-data{
+                font-size: 1.2rem;
+                color: $greyDarkColor;
+                text-align: left;
+                text-transform: uppercase;
+                font-style: italic;
+            }
+        }
+        .userLastname { 
+            grid-area: 1 / 2 / 2 / 3; 
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 20px;                            
+            .userLastname-label{
+                font-size: 1.5rem;
+                color: $greyDarkColor;
+                text-align: left;
+                font-weight: 600;
+            }
+            .userLastname-data{
+                font-size: 1.2rem;
+                color: $greyDarkColor;
+                text-align: left;
+                text-transform: uppercase;
+                font-style: italic;
+            }
+        }
+        .userNickname { 
+            grid-area: 2 / 1 / 3 / 2; 
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 20px;
+            .userNickname-label{
+                font-size: 1.5rem;
+                color: $greyDarkColor;
+                text-align: left;
+                font-weight: 600;
+            }
+            .userNickname-data{
+                font-size: 1.2rem;
+                color: $greyDarkColor;
+                text-align: left;
+                text-transform: uppercase;
+                font-style: italic;
+            }
+        }
+        .userMail { 
+            grid-area: 2 / 2 / 3 / 3; 
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.5fr 0.5fr;
+            height: 20px;
+            .userMail-label{
+                font-size: 1.5rem;
+                color: $greyDarkColor;
+                text-align: left;
+                font-weight: 600;
+            }
+            .userMail-data{
+                font-size: 1.2rem;
+                color: $greyDarkColor;
+                text-align: left;
+                text-transform: uppercase;
+                font-style: italic;
+            }
+        }
+    }
+}
+.myhikesTitle{
+    font-size: 1.5rem;
+    color: $greyDarkColor;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.my-hikes{
+    grid-area: 2 / 1 / 3 / 3;
+    justify-self: center;
+    margin: 0 auto;
+    width: 1150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    h3{
+        font-size: 1.5rem;
+        color: $greyDarkColor;
+    }
+    a{
+        text-decoration: none;
+        color: $blueColor;
+        font-size: 1.5rem;
+        transition: all 0.1s ease-in-out;
+        &:hover{
+            color: $blueColor;
+            text-decoration: underline;
+        }
+    }
+}

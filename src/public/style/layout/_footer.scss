@@ -1,0 +1,69 @@
+footer{
+    padding:30px;
+    background-color: $blueColor;
+    width:100vw;
+    margin-top: 20px;
+    border-top: 2px solid rgb(88, 88, 121);
+    p{
+        margin-top: 80px;
+        color: $greyColor;
+        margin: auto;
+        text-align: center;
+    }
+    .reseau{
+        margin-top: 50px;
+
+        .menu_reseau{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:16px;
+            list-style-type: none;
+            margin-bottom: 10px;
+            li{
+                a,
+                a:link,
+                a:visited{
+                    img{
+                        height: 35px;
+                        width: 35px;
+                        transition: all 0.15s ease-in-out;
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .about-us{
+        text-align: right;
+
+        a,
+        a:visited
+        a:link{
+            margin: auto;
+            font-size: 35px;
+            color: $greyColor;
+            text-decoration: none;
+            text-transform: uppercase;
+            position: relative;
+        }
+        a::after{
+            position : absolute;
+            width : 100%;
+            height : 4px;
+            background-color: $greyColor;
+            bottom: -2px;
+            left: 0;
+            transform : scaleX(0);
+            transform-origin: bottom right;
+            transition : transform 0.25s linear;
+            content : "";
+        }
+        a:hover::after{
+            transform-origin: bottom left;
+            transform: scaleX(1);
+        }
+    }    
+}

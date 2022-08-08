@@ -1,0 +1,134 @@
+.loginGlobalContainer{
+    background-color: $greyColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    .loginTitle{
+        h2{
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            color: $greyDarkColor;
+            margin-bottom: 20px;
+            @media screen and (max-width: 980px) {
+                text-align: center;
+                padding: 15px;
+            }
+        }
+        p{
+            font-size: 1.5rem;
+            color: $greyDarkColor;
+            margin-bottom: 20px;
+            @media screen and (max-width: 980px) {
+            text-align: center;
+            }
+        }
+    }
+    .loginForm{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 20px;
+        @media screen and (max-width: 980px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr); 
+            padding-left: 40px;
+        }
+        &__nicknameContainer{
+            grid-area: 1 / 1 / 2 / 2;
+            @media screen and (max-width: 980px) {
+                display:flex;
+                flex-direction: column;
+            }
+            label{
+                font-size: 1.5rem;
+                color: $greyDarkColor;
+                text-align: left;
+            }
+            input{
+                width: 380px;
+                height: 45px;
+                border: 1px solid $greyDarkColor;
+                padding: 10px;
+                background-color: #f7f7f7;
+                font-size: 1rem;
+                color: $greyDarkColor;
+                text-align: left;
+                &:focus{
+                    outline: none;
+                    border: 1px solid $blueColor;
+                }
+            }
+        }
+        &__passwordContainer{
+            grid-area: 1 / 2 / 2 / 3;
+        @media screen and (max-width: 980px) {
+            display:flex;
+            flex-direction: column;
+            grid-area: 2 / 1 / 3 / 2;
+        }
+            label{
+                font-size: 1.5rem;
+                color: $greyDarkColor;
+                text-align: left;
+            }
+            input{
+                width: 380px;
+                height: 45px;
+                border: 1px solid $greyDarkColor;
+                padding: 10px;
+                background-color: #f7f7f7;
+                font-size: 1rem;
+                color: $greyDarkColor;
+                text-align: left;
+                &:focus{
+                    outline: none;
+                    border: 1px solid $blueColor;
+                }
+            }
+        }
+        &__SubBtnContainer{
+            grid-area: 2 / 1 / 3 / 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media screen and (max-width: 980px) {
+                grid-area: 3 / 1 / 4 / 2;           
+            }
+            input{
+            cursor: pointer;
+                list-style-type: none;
+                text-transform: uppercase;
+                border: 1px solid $blueColor;
+                text-align: center;
+                font-size: 1.5rem;
+                color: $greyDarkColor;
+                width: 430px;
+                height: 45px;
+                position: relative;
+                z-index: 1000;
+                transition: all 0.1s ease-in-out;
+                @media screen and (max-width: 980px) {
+                    width: 100%;         
+                }
+                &:hover {
+                    transform: translate(-1px, -2px);
+                    box-shadow: $greyColor 5px 5px 0px -0.5px, $blueColor 5px 5px;
+                }
+            }
+        }
+    }
+    .loginSubNowContainer{
+        p{
+            color: $greyDarkColor;
+        }
+        a,
+        a:link,
+        a:visited{
+            text-decoration: none;
+            color: $blueColor;
+            text-align: center;
+        }
+    }
+}

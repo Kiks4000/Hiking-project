@@ -1,0 +1,89 @@
+.container{
+    max-width: 1200px;
+    margin: 30px auto ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow:1px 1px 11px 1px rgb(91 91 91 / 20%);
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+    .img-container{
+        width: 100%;
+        height: auto;
+        height: 400px;
+        overflow: hidden;
+
+        border: 1px solid $blueColor;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        label{
+            font-weight: 700;
+        }
+    }
+    .hike{
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px 20px 50px;
+    border-top: 1px solid $blueColor;
+    border-right: 1px solid $blueColor;
+    border-bottom: 1px solid $blueColor;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+        span{
+            font-weight: 700;
+        }
+        i{
+            color: $blueColor;
+        }
+        
+        .tags{
+            display: flex;
+            font-weight : 700;
+            text-transform: uppercase;
+            gap: 20px;
+        }
+        .description{
+            font-size: 1rem;
+            color: #000;
+            text-align: left;
+        }
+        
+    }
+}.btnContainer{
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+            .btn-container{
+                display: flex;
+                text-align: center;
+                .btn{
+                background: $greyColor;
+                color: $blueColor;
+                padding: 10px 15px;
+                margin: 10px;
+                width: 150px;
+                border: 1px solid $greyDarkColor;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: all 0.1s ease-in-out;
+                
+                &:hover {
+                        transform: translate(-1px, -2px);
+                        box-shadow: $greyColor 5px 5px 0px -0.5px, $blueColor 5px 5px;
+                        border: 1px solid $blueColor;
+                }
+                a{
+                    text-decoration: none;
+                    color: $blueColor;
+                }
+            }
+            }
+            
+        }

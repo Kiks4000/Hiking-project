@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Titillium web";
+}
+body {
+    // max-width: 1440px;
+    // align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    margin: 0 auto;
+    background: rgba(211, 211, 211, 0.301);
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+
+// ---------------------------------- VARIABLES ----------------------------------
+
+
+$blueColor: rgb(36, 179, 184);
+$greyColor: #F1F1F1;
+$greyDarkColor: rgb(91, 91, 91); 

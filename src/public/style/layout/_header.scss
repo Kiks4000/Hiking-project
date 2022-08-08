@@ -1,0 +1,184 @@
+header {
+    @function random_range($min, $max) {
+        $rand: random();
+        $random_range: $min + floor($rand * (($max - $min) + 1));
+        @return $random_range;
+      }
+      
+      .snow {
+        $total: 200;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: $blueColor;
+        border-radius: 50%;
+      
+        @for $i from 1 through $total {
+          $random-x: random(1000000) * 0.0001vw;
+          $random-offset: random_range(-100000, 100000) * 0.0001vw;
+          $random-x-end: $random-x + $random-offset;
+          $random-x-end-yoyo: $random-x + ($random-offset / 2);
+          $random-yoyo-time: random_range(30000, 80000) / 100000;
+          $random-yoyo-y: $random-yoyo-time * 33vh;
+          $random-scale: random(10000) * 0.0001;
+          $fall-duration: random_range(10, 30) * 1s;
+          $fall-delay: random(30) * -1s;
+      
+          &:nth-child(#{$i}) {
+            opacity: random(10000) * 0.0001;
+            transform: translate($random-x, -10px) scale($random-scale);
+            animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
+          }
+      
+          @keyframes fall-#{$i} {
+            #{percentage($random-yoyo-time)} {
+              transform: translate($random-x-end, $random-yoyo-y) scale($random-scale);
+            }
+      
+            to {
+              transform: translate($random-x-end-yoyo, 33vh) scale($random-scale);
+            }
+          }
+        }
+      }
+    // Animation from  https://codepen.io/alphardex/pen/dyPorwJ 
+      
+    section {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px;
+        .hamburger {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 250px;
+          right: 24px;
+          cursor: pointer;
+          z-index: 1;
+          span {
+              width: 24px;
+              height: 4px;
+              background: $blueColor;
+              margin: 2px;
+          }
+          @media screen and (min-width: 768px) {
+              display: none;
+          }
+      }
+      .burger {
+        span {
+            transition: 0.2s;
+        }
+        span:nth-child(1) {
+            transform: rotate(-45deg);
+            width: 30px;
+        }
+        span:nth-child(2) {
+            display: none;
+        }
+        span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+            width: 30px;
+        }
+    }
+        span {
+            width: 100vw;
+            border: 2px solid $blueColor;
+        }
+        img {
+            height: 220px;
+            margin-bottom: 50px;
+        }
+        .navDesktop {
+          @media screen and (max-width: 768px) {
+            display: none;
+        }
+            ul {
+                display: flex;
+                text-transform: uppercase;
+                justify-content: space-around;
+                font-size: 1.4rem;
+                margin-bottom: 25px;
+                align-items: center;
+                gap: 50px;
+                @media screen and (max-width: 1320px) {
+                  gap: 30px;
+                }
+                @media screen and (max-width: 1230px) {
+                  gap: 15px;
+                }
+                @media screen and (max-width: 1160px) {
+                  gap: 5px;
+                }
+                @media screen and (max-width: 1125px) {
+                  flex-wrap: wrap;
+                  justify-content: center;
+                  gap: 10px;
+                }
+                li {
+                    list-style-type: none;
+                    border: 1px solid $blueColor;
+                    text-align: center;
+                    min-width: 218px;
+                    padding: 10px;
+                    position: relative;
+                    z-index: 1000;
+                    transition: all 0.1s ease-in-out;
+                    &:hover {
+                        transform: translate(-3px, -6px);
+                        box-shadow: $greyColor 10px 10px 0px -1px, $blueColor 10px 10px;  
+                    }
+                    a {
+                        z-index: 1001;
+                        text-decoration: none;
+                        color: $blueColor;
+                        padding: 10px 80px;
+                        @media screen and (max-width: 1585px) {
+                          padding: 10px 50px;
+                        }
+                        @media screen and (max-width: 1385px) {
+                          padding: 10px 30px;
+                        }
+                        &:visited {
+                            color: $blueColor;
+                        }
+                    }
+                }
+            }
+        }
+        .navMobile{
+          position: absolute;
+          border: 1px solid $blueColor;
+          margin-top: -200px;
+          background: $greyColor;
+          z-index: 1000;
+          top: -200px;
+          transition: 0.4s ease-in-out;
+          @media screen and (min-width: 768px) {
+            display: none;
+        }
+          ul{
+            list-style-type: none;
+            text-transform: uppercase;
+            font-size: 2rem;
+            li{
+              a{
+                
+                z-index: 1001;
+                text-decoration: none;
+                color: $blueColor;
+                padding: 10px 30px;
+              
+                &:visited {
+                    color: $blueColor;
+                }
+              }
+            }
+          }
+        }
+        .active {
+          top: 220px;
+      }
+    }
+}
