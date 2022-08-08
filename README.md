@@ -1,4 +1,4 @@
-# <img src="./src/public/img/favicon-32X32.png" alt="hiking-logo"/> Hiking Project
+# <img src="https://raw.githubusercontent.com/Kiks4000/Hiking-project/main/src/public/img/favicon-32x32.png"/> Hiking Project
 
 @Becode  
 
